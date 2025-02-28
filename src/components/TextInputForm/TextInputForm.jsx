@@ -31,7 +31,7 @@ function TextInputForm({ handleFormSubmit, inputType, handleTextInputChange, val
             <div>
                 <Button
                     text="Ok"
-                    type="submit"
+                    buttonType="submit"
                 />
             </div>
         </form>
