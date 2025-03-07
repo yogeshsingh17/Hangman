@@ -1,9 +1,12 @@
 // Presentation Component
 
+import { useState } from "react";
 import Button from "../Button/button";
 import TextInput from "../TextInput/TextInput";
 
 function TextInputForm({ handleFormSubmit, inputType, handleTextInputChange, value, setInputType }){
+
+    const [toggle, setToggle] = useState(false);
 
     return (
         <form className="flex items-end" onSubmit={handleFormSubmit}>     {/* every form has a onSubmit eventListener
@@ -33,6 +36,18 @@ function TextInputForm({ handleFormSubmit, inputType, handleTextInputChange, val
                     text="Ok"
                     buttonType="submit"
                 />
+            </div>
+
+            <div>
+                <button
+                    onClick={(event) => {
+                        event.preventDefault();
+                        setToggle(!toggle);
+                    }}
+                    style={{backgroundColor : toggle ? 'red' : 'blue'}}
+                >
+                    Good morning
+                </button>
             </div>
         </form>
     )
