@@ -13,7 +13,7 @@ function StartGame(){
         <div>
             <h1>Start Game</h1>
             <TextInputFormContainer onSubmit={handleSubmit}/>
-            {/* <Link to={'/play'}> Play Game </Link> */}
+            {/* <Link to={'/Hangman/play'}> Play Game </Link> */}
         </div>
     );
 }

@@ -16,12 +16,17 @@ function App(){
      * Creating pages for the game using Routes
      * In routes we can give path of pages of our website.
     */
-    <Routes>
-      <Route path="/play" element={<PlayGame />} />
-      <Route path="/start" element={<StartGame />} />
-      <Route path="*" element={<div>not found</div>} />   {/* If the path does not exist then this message will appear. */}
-    </Routes>
+    <>
+      <div>
+        <nav>Navigation bar</nav>
+      </div>
 
+      <Routes>
+      <Route path="/Hangman/play" element={<PlayGame />} />
+      <Route path="/Hangman/start" element={<StartGame />} />
+      <Route path="*" element={<div>not found</div>} />   {/* If the path does not exist then this message will appear. */}
+      </Routes>
+    </>
   );
 }
 
