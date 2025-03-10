@@ -5,8 +5,9 @@ import TextInputFormContainer from "../../components/TextInputForm/TextInputForm
 function StartGame(){
     const navigate = useNavigate();
 
-    function handleSubmit(){
-        navigate('/play');
+    function handleSubmit(value){
+        console.log(value);
+        navigate('/Hangman/play', {state: {wordSelected : value}});             //Here we can pass the route and then we can pass the object with the state which will hold the current value added by the user in start game.
     }
 
     return (
